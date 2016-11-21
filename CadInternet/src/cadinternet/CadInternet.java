@@ -5,6 +5,9 @@
  */
 package cadinternet;
 
+import views.FormPrincipal;
+
+
 /**
  *
  * @author Milton Carlos Katoo
@@ -15,7 +18,9 @@ public class CadInternet {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        FormPrincipal principal = new FormPrincipal();
+        principal.setExtendedState(principal.MAXIMIZED_BOTH);
+        principal.setVisible(true);
     }
     
 }
