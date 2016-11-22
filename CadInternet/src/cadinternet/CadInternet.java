@@ -5,6 +5,7 @@
  */
 package cadinternet;
 
+import views.FormLogin;
 import views.FormPrincipal;
 
 
@@ -18,9 +19,8 @@ public class CadInternet {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        FormPrincipal principal = new FormPrincipal();
-        principal.setExtendedState(principal.MAXIMIZED_BOTH);
-        principal.setVisible(true);
+        FormLogin login = new FormLogin();
+        login.setVisible(true);
     }
     
 }

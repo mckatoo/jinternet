@@ -5,6 +5,18 @@
  */
 package views;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Milton Carlos Katoo
@@ -14,8 +26,16 @@ public class FormPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form FormPrincipal
      */
-    public FormPrincipal() {
+    public FormPrincipal() throws IOException {
         initComponents();
+        
+        try {    
+            URL url = this.getClass().getResource("/imagens/icone.png");
+            Image imagemTitulo = Toolkit.getDefaultToolkit().getImage(url);
+            this.setIconImage(imagemTitulo);
+        } catch (Exception e) {
+            //nada
+        }
     }
 
     /**
@@ -27,23 +47,132 @@ public class FormPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        btnAlunos = new javax.swing.JButton();
+        btnProfessores = new javax.swing.JButton();
+        btnConfiguracoes = new javax.swing.JButton();
+        btnFuncionarios = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        btnConfiguracoes1 = new javax.swing.JButton();
+
+        setTitle("Pré-Cadastro de Internet");
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         setResizable(false);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        btnAlunos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnAlunos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/reading.png"))); // NOI18N
+        btnAlunos.setText("Alunos");
+        btnAlunos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAlunos.setPreferredSize(new java.awt.Dimension(148, 78));
+        btnAlunos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAlunos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlunosActionPerformed(evt);
+            }
+        });
+
+        btnProfessores.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnProfessores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/people.png"))); // NOI18N
+        btnProfessores.setText("Professores");
+        btnProfessores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnProfessores.setPreferredSize(new java.awt.Dimension(148, 78));
+        btnProfessores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        btnConfiguracoes.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnConfiguracoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/settings.png"))); // NOI18N
+        btnConfiguracoes.setText("Configurações");
+        btnConfiguracoes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnConfiguracoes.setPreferredSize(new java.awt.Dimension(148, 78));
+        btnConfiguracoes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        btnFuncionarios.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnFuncionarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/worker.png"))); // NOI18N
+        btnFuncionarios.setText("Funcionários");
+        btnFuncionarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnFuncionarios.setPreferredSize(new java.awt.Dimension(148, 78));
+        btnFuncionarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        btnConfiguracoes1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnConfiguracoes1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/power.png"))); // NOI18N
+        btnConfiguracoes1.setText("Sair");
+        btnConfiguracoes1.setToolTipText("Encerrar o Aplicativo");
+        btnConfiguracoes1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnConfiguracoes1.setPreferredSize(new java.awt.Dimension(148, 78));
+        btnConfiguracoes1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnConfiguracoes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracoes1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnAlunos, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnProfessores, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnFuncionarios, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnConfiguracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnConfiguracoes1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(btnConfiguracoes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnFuncionarios, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnProfessores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAlunos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnConfiguracoes1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 931, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 487, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        pack();
-        setLocationRelativeTo(null);
+        setBounds(0, 0, 787, 161);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnConfiguracoes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracoes1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnConfiguracoes1ActionPerformed
+
+    private void btnAlunosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlunosActionPerformed
+        FormAlunos frmalunos = new FormAlunos();
+        frmalunos.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnAlunosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -56,7 +185,7 @@ public class FormPrincipal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -75,11 +204,22 @@ public class FormPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FormPrincipal().setVisible(true);
+                try {
+                    new FormPrincipal().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(FormPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAlunos;
+    private javax.swing.JButton btnConfiguracoes;
+    private javax.swing.JButton btnConfiguracoes1;
+    private javax.swing.JButton btnFuncionarios;
+    private javax.swing.JButton btnProfessores;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
